@@ -1,0 +1,15 @@
+---
+interface Props {
+    name: string;
+}
+const { name } = Astro.props;
+let href = `#${name}`
+href == '#Home' ? href = '#top  ' : href
+---
+
+<li>
+    <a class = "after:bg-black after:w-0 after:h-[2px] after:block hover:after:w-full after:transition-all" 
+    href = {href} >
+        {name}
+    </a>
+</li>

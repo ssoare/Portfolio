@@ -1,0 +1,32 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import Header from '../components/Header.astro';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width , initial-scale=1 " />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		
+	</head>
+	<body>
+		<Header />
+		<main class="mt-12">
+			<slot />
+		</main>
+	</body>
+</html>
+
+<style is:global>
+	html {
+		scroll-behavior: smooth;
+	}
+</style>

@@ -1,0 +1,22 @@
+---
+interface Props {
+    title: string;
+    link: string;
+    image: string;
+}
+const { title, link, image } = Astro.props;
+console.log(image)
+---
+
+<article class=" w-96 aspect-video bg-blue-200 rounded-xl hover:scale-105 transition shadow-md shadow-black mx-auto my-4">
+    <a class="flex justify-center h-full text-xl" href={link} target="_blank"></a>
+    <p class="p-1 font-semibold text-lg">{title}</p>
+</article>
+
+<style>
+    article {   
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/elrincon2.png');
+        background-position: center;
+        background-size: cover;
+    }
+</style>
