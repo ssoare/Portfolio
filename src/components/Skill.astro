@@ -3,6 +3,13 @@ interface Props {
     name: string;
 }
 const { name } = Astro.props;
+
+import { Image } from 'astro:assets';
+import html from '../images/html.png'
+import css from '../images/css.png'
+import javascript from '../images/javascript.png'
+import react from '../images/react.png'
 ---
 
-<img class="h-12" src=`/images/${name}.png`>
+<img class='h-12' src={`/${name}.png`} alt="A description of my image." />
+
